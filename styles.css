@@ -11,30 +11,26 @@
 .heading h1{
 	text-align: center;
 	margin: 0;
+	margin-left: 5rem;
 	padding: 0;
 	color: var(--text-primary);
 }
 
-body {
-	color: black;
-	margin: 0;
-	padding: 0;
-}
-
-main {
-	color: var(--text-secondary);
+.heading h2 {
 	text-align: center;
+	margin: 0;
 	margin-left: 5rem;
-	padding: 1rem;
+	padding: 0;
+	color: var(--text-secondary);
 }
 
 .navbar {
 	width: 5rem;
 	height: 100vh;
-	position: absolute;
+	position: fixed;
 	background: var(--bg-secondary);
-	font-size: 1.5rem;
-
+	box-shadow: 1px 1px 10px 3px gray;
+	transition: width 200ms ease;
 }
 
 .navbar-nav {
@@ -44,6 +40,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 100%;
 }
 
 .nav-item {
@@ -68,6 +65,31 @@ main {
 }
 
 .nav-link svg {
+	transform: scale(2);
 	min-width: 2rem;
 	margin: 0 1.5rem;
+}
+
+.navbar:hover {
+	width: 16rem;
+}
+
+.navbar:hover .link-text {
+	display: block;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	color: var(--text-secondary);
+	text-align: center;
+	margin-left: 5rem;
+	padding: 1rem;
+}
+
+main li {
+	list-style-type: none;
 }
