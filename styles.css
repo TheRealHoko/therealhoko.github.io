@@ -3,7 +3,7 @@
 	font-family: monospace;
 	--text-primary: #000000;
 	--text-secondary: #504f4f;
-	--bg-primary: linear-gradient(90deg, rgba(217,174,238,1) 0%, rgba(233,148,148,1) 100%);
+	--bg-primary: linear-gradient(90deg, #2C90C4 0%, #31CCB0 100%);
 	--bg-secondary: linear-gradient(180deg, rgba(184,57,246,1) 0%, rgba(255,105,252,1) 100%);
 	background: var(--bg-primary);
 }
