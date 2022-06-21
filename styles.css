@@ -62,6 +62,10 @@
 .link-text {
 	display: none;
 	margin-left: 1rem;
+	background: var(--bg-primary);
+	background-clip: unset;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .nav-link svg {
@@ -92,4 +96,17 @@ main {
 
 main li {
 	list-style-type: none;
+}
+
+.project-list:hover {
+	display: block;
+	color: #000000;
+
+}
+
+.introduction {
+	background: var(--bg-secondary);
+	background-clip: unset;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
