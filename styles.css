@@ -1,112 +1,60 @@
 :root {
 	font-size: 150%;
 	font-family: monospace;
-	--text-primary: #000000;
+	--text-primary: #ffffff;
 	--text-secondary: #504f4f;
 	--bg-primary: linear-gradient(90deg, #2C90C4 0%, #31CCB0 100%);
-	--bg-secondary: linear-gradient(180deg, rgba(184,57,246,1) 0%, rgba(255,105,252,1) 100%);
+	--bg-secondary: linear-gradient(90deg, #31CCB0 0%, #2C90C4 100%);
 	background: var(--bg-primary);
-}
-
-.heading h1{
-	text-align: center;
-	margin: 0;
-	margin-left: 5rem;
-	padding: 0;
 	color: var(--text-primary);
 }
 
-.heading h2 {
-	text-align: center;
-	margin: 0;
-	margin-left: 5rem;
-	padding: 0;
-	color: var(--text-secondary);
-}
-
-.navbar {
-	width: 5rem;
-	height: 100vh;
+.bubble, .bubble-check{
 	position: fixed;
-	background: var(--bg-secondary);
-	box-shadow: 1px 1px 10px 3px gray;
-	transition: width 200ms ease;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform-origin: center;
 }
 
+.bubble {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	background-image: var(--bg-secondary);
+	transition: 200ms ease-in-out;
+}
+
+.bubble:hover, .bubble:hover~.bubble-msg {
+	transform: translate(-50%, -50%) scale(1.2, 1.2);
+}
+
+.bubble-check {
+	z-index: 1;
+	visibility: hidden;
+	transform: translate(-50%, -50%) scale(1.5, 1.5);
+}
+
+.bubble-check:checked~.navbar-nav {
+	display: block;
+
+}
+
+.bubble-msg {
+	user-select: none;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 200ms ease-in-out;
+}
 .navbar-nav {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100%;
-}
-
-.nav-item {
-	width: 100%;
-}
-
-.nav-item:last-child {
-	margin-top: auto;
-}
-
-.nav-link {
-	display: flex;
-	align-items: center;
-	height: 5rem;
-	color: var(--text-primary);
-	text-decoration: none;
-}
-
-.link-text {
 	display: none;
-	margin-left: 1rem;
-	background: var(--bg-primary);
-	background-clip: unset;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.nav-link svg {
-	transform: scale(2);
-	min-width: 2rem;
-	margin: 0 1.5rem;
-}
-
-.navbar:hover {
-	width: 16rem;
-}
-
-.navbar:hover .link-text {
-	display: block;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-}
-
-main {
-	color: var(--text-secondary);
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	flex-direction: column;
+	list-style: none;
 	text-align: center;
-	margin-left: 5rem;
-	padding: 1rem;
-}
-
-main li {
-	list-style-type: none;
-}
-
-.project-list:hover {
-	display: block;
-	color: #000000;
-
-}
-
-.introduction {
-	background: var(--bg-secondary);
-	background-clip: unset;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
